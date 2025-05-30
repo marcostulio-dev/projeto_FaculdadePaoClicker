@@ -1,63 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:background="@drawable/background_image"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvPaoCount"
         android:text="Pães de Queijo: 0"
         android:textSize="24sp"
-        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/rounded_primary_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botão do Forno -->
 
     <ImageButton
         android:id="@+id/btnClick"
         android:layout_width="180dp"
         android:layout_height="170dp"
-        android:src="@drawable/pao_de_queijo"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:contentDescription="Assar Pão de Queijo"/>
+        android:contentDescription="Assar Pão de Queijo"
+        android:src="@drawable/pao_de_queijo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPaoCount" />
 
     <Button
         android:id="@+id/btnForno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/primaryButton"
         android:text="Comprar Forno (+1 por clique) - 100"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnClick" />
+
     <TextView
         android:id="@+id/tvFornoCount"
-        android:text="Fornos: 0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Forno: 0"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_primary_text"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnForno" />
 
+    <!-- Botão dos Aprendizes -->
     <Button
         android:id="@+id/btnAprendiz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryButton"
         android:text="Contratar Aprendiz (+1/s) - 500"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFornoCount" />
 
     <TextView
         android:id="@+id/tvAprenCount"
-        android:text="Aprendizes: 0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Aprendiz: 0"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_primary_text"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAprendiz" />
 
+    <!-- Botão da Fábrica -->
     <Button
         android:id="@+id/btnFabrica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryButton"
         android:text="Construir Fábrica (+10/s) - 2000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAprenCount" />
 
     <TextView
         android:id="@+id/tvFabricaCount"
-        android:text="Fábricas: 0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Fábrica: 0"
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_primary_text"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFabrica" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
